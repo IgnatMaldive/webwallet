@@ -141,13 +141,7 @@
             var script;
             const initScript = () => {
                 if (!localStorage.getItem('seed')) {
-                    document.getElementById('msg').innerHTML = `<p>Welcome to your Tique Case!</p>
-    
-    <p>The Tique Case is a wallet that manages your Tokens and Jigs!</p>
-    
-    <p>This wallet has 2 sets of keys, the purse and <strong>owner</strong>.</p>
-    
-    <p>You must have funded your purse with Bitcoin SV before you can send jigs!</p>`;
+                    document.getElementById('msg').innerHTML = `<p>Welcome to mini-bsv wallet!</p>`;
                     dModal.style.display = 'block';
                     var head = document.getElementsByTagName('head')[0];
                     script = document.createElement('script');

@@ -1,6 +1,6 @@
 {
-    "name": "Tique Case",
-    "short_name": "Tique Case",
+    "name": "mini wallet",
+    "short_name": "mini wallet",
     "orientation": "portrait",
     "scope": "./",
     "icons": [
