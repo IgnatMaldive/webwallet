@@ -1,51 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>bsv mini-wallet</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta property="og:title" content="bsv mini-wallet<"/>
-        <meta property="og:type" content="website">
-        <meta property="og:image:url" content="./assets/logo-512x512.png">
-        <meta property="og:image" content="./assets/logo-512x512.png">
-        <meta property="og:description" content="Your Keepsakes on Bitcoin">
-        <meta name="theme-color" content="#D3D3D3">
-        <meta name="description" content="Your Keepsakes on Bitcoin">
-        <meta name="twitter:card" content="summary"/>
-        <meta name="twitter:creator" content="@cryptoacorns"/>
-        <meta name="twitter:image" content="https://tique.run/images/logo-512x512.png"/>
-        <meta name="description" content="Your Keepsakes on Bitcoin">
-        <meta name="apple-mobile-web-app-title" content="Tique Case">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <link rel="manifest" href="./manifest.json">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <script src="./scripts/fontawesome.js"></script>
-        <link rel="apple-touch-icon" href="./images/apple-touch-icon.png">
-        <link rel="icon" href="./favicon.ico">
-        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
-        <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Permanent+Marker&family=Roboto&family=Roboto+Slab&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <!--PAGE 1/4 JIG-->
-        <div id='page-one'>
-            <h1 class='title'></h1>
-            <div class='section-prim'>
-                <div class='center topimg' style="display:none">
-                </div>
+
+<head>
+    <title>bsv mini-wallet</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="bsv mini-wallet<" />
+    <meta property="og:type" content="website">
+    <meta property="og:image:url" content="./assets/logo-512x512.png">
+    <meta property="og:image" content="./assets/logo-512x512.png">
+    <meta property="og:description" content="Your Keepsakes on Bitcoin">
+    <meta name="theme-color" content="#D3D3D3">
+    <meta name="description" content="Your Keepsakes on Bitcoin">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:creator" content="@cryptoacorns" />
+    <meta name="twitter:image" content="https://tique.run/images/logo-512x512.png" />
+    <meta name="description" content="Your Keepsakes on Bitcoin">
+    <meta name="apple-mobile-web-app-title" content="Tique Case">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="./scripts/fontawesome.js"></script>
+    <link rel="apple-touch-icon" href="./images/apple-touch-icon.png">
+    <link rel="icon" href="./favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Permanent+Marker&family=Roboto&family=Roboto+Slab&display=swap"
+        rel="stylesheet">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+</head>
+
+<body id="page-top">
+    <!--PAGE 1/4 JIG-->
+    <div id='page-one'>
+        <h1 class='title'></h1>
+        <div class='section-prim'>
+            <div class='center topimg' style="display:none">
             </div>
-            <div class='belt'>
-                <div style="display:none">
-                    <p class='font-prim'>
-                        <span class='font-sec adrs' id="ownerAddr"></span>
-                        </i>
-                    </p>
-                </div>
+        </div>
+        <div class='belt'>
+            <div style="display:none">
+                <p class='font-prim'>
+                    <span class='font-sec adrs' id="ownerAddr"></span>
+                    </i>
+                </p>
             </div>
-            <div class='section-sec' >
-                <input style="display:none" class="searchbar font-prim" type="text" id="nftSearch" onkeyup="search(this.id)" placeholder="Search" onclick="expand(this)">
-                <div style="display:none" class='cardlist font-sec' id="nftlist">
-                    <div class="lds-ellipsis" id="loading">
+        </div>
+        <div class='section-sec'>
+            <input style="display:none" class="searchbar font-prim" type="text" id="nftSearch" onkeyup="search(this.id)"
+                placeholder="Search" onclick="expand(this)">
+            <div style="display:none" class='cardlist font-sec' id="nftlist">
+                <div class="lds-ellipsis" id="loading">
                 </div>
             </div>
         </div>
@@ -67,12 +85,13 @@
                 </div>
             </div>
             <div class='section-sec' style="display:none">
-                <input class="searchbar font-prim" type="text" id="tokenSearch" onkeyup="search(this.id)" placeholder="Search" onclick="expand(this)">
+                <input class="searchbar font-prim" type="text" id="tokenSearch" onkeyup="search(this.id)"
+                    placeholder="Search" onclick="expand(this)">
                 <div style="display:none" style="display:none" class='cardlist font-sec' id="tokenlist"></div>
             </div>
         </div>
         <!--PAGE 3/4 Bitcoin-->
-        <div id='page-three'>
+        <!-- <div id='page-three temp'>
             <h1 class='title'>Bitcoin</h1>
             <div class="section-prim">
                 <div class='center'>
@@ -99,73 +118,177 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!--Side Navigation-->
         <div class='modal'>
             <span style="display:none" class="modalclose" onclick='closeSideNav()'>&times;</span>
             <div id='sidenav'>
 
-                </div>
             </div>
         </div>
-        
-        <!--Bottom Navigation-->
-        <div class='indicator'><div id='indicator_bar'></div></div>
-        <div id='bottomnav'>
-        </div>
+    </div>
 
-        <!--Modal-->
-        <div id='dModal' class='modal'>
-            <span style="display:none" class="modalclose" onclick='closeDModal()'>&times;</span>
-            <div class='modal-content perfectcenter'>
+    <!--Bottom Navigation-->
+    <div class='indicator'>
+        <div id='indicator_bar'></div>
+    </div>
+    <div id='bottomnav'>
+    </div>
 
-                <div class="modalDiv">
-                    <p class='font-prim' id="msg"></p>
-                    <!-- <div class='simplebtn'></div> -->
-                </div>
+    <!--Modal-->
+    <div id='dModal' class='modal'>
+        <span style="display:none" class="modalclose" onclick='closeDModal()'>&times;</span>
+        <div class='modal-content perfectcenter'>
+
+            <div class="modalDiv">
+                <p class='font-prim' id="msg"></p>
+                <!-- <div class='simplebtn'></div> -->
             </div>
         </div>
+    </div>
 
-        <!--QRCode-->
-        <div id='qModal' class='modal'>
-            <span style="display:none" class="modalclose" onclick='closeQModal()'>&times;</span>
-            <div class='modal-content perfectcenter qrmdl'>
-                <div class="modalDiv">
-                    <div id="qr" class="perfectcenter" class="qrcode"></div>
-                    <p class='font-prim' id="qmsg"></p>
-                </div>
+    <!--QRCode-->
+    <div id='qModal' class='modal'>
+        <span style="display:none" class="modalclose" onclick='closeQModal()'>&times;</span>
+        <div class='modal-content perfectcenter qrmdl'>
+            <div class="modalDiv">
+                <div id="qr" class="perfectcenter" class="qrcode"></div>
+                <p class='font-prim' id="qmsg"></p>
             </div>
         </div>
-        <script>
-            var script;
-            const initScript = () => {
-                if (!localStorage.getItem('seed')) {
-                    document.getElementById('msg').innerHTML = `<p>Welcome to mini-bsv wallet!</p>`;
-                    dModal.style.display = 'block';
-                    var head = document.getElementsByTagName('head')[0];
-                    script = document.createElement('script');
-                    script.src = 'scripts/bsv-mnemonic.min.js';
-                    head.appendChild(script);
-                }
+    </div>
+
+
+    <div id='page-three'>
+        <!-- Page Wrapper -->
+        <div id="wrapper">
+
+
+            <!-- Content Wrapper -->
+            <div id="content-wrapper" class="d-flex flex-column">
+
+                <!-- Main Content -->
+                <div id="content">
+
+
+
+                    <!-- Begin Page Content -->
+                    <div class="container-fluid">
+
+                        <!-- Page Heading -->
+                        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                            <h1 class="h3 mb-0 text-gray-800">Cards</h1>
+
+                        </div>
+
+                        <div class="row">
+
+                            <!-- Earnings (Monthly) Card Example -->
+                            <div class="col-xl-3 col-md-6 mb-4">
+                                <div class="card border-left-primary shadow h-100 py-2">
+                                    <div class="card-body">
+                                        <div class="row no-gutters align-items-center">
+                                            <div class="col mr-2">
+                                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                    Earnings (Monthly)</div>
+                                                <br>
+
+                                                <div class="h5 mb-0 font-weight-bold text-gray-800">txxt</div>
+                                                <div>
+                                                    <h1 class='title'>Bitcoin</h1>
+                                                    <div class="section-prim">
+                                                        <div class='center'>
+                                                            <div class='purse'>
+                                                                <span class='font-prim label'>Balance:</span>
+                                                                <span class='font-sec amount' id="bsvBalance"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class='belt grey'>
+                                                        <div>
+                                                            <p class='font-prim'>Receive Bitcoin:
+                                                                <span class='font-sec adrs' id="purseAddr"></span>
+                                                                <i class="fas fa-qrcode fa-lg qrcode"></i>
+
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class='section-sec bitcoin'>
+                                                        <div class='center'>
+                                                            <div id='sendbsv' class='simplebtn'>
+
+                                                                Send
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-auto">
+                                                <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+
+
+                        </div>
+
+
+
+                    </div>
+                    <!-- /.container-fluid -->
+
+                </div>
+                <!-- End of Main Content -->
+
+
+            </div>
+            <!-- End of Content Wrapper -->
+
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+        var script;
+        const initScript = () => {
+            if (!localStorage.getItem('seed')) {
+                document.getElementById('msg').innerHTML = `<p>Welcome to mini-bsv wallet!</p>`;
+                dModal.style.display = 'block';
+                var head = document.getElementsByTagName('head')[0];
+                script = document.createElement('script');
+                script.src = 'scripts/bsv-mnemonic.min.js';
+                head.appendChild(script);
             }
-            initScript();
-            if ('serviceWorker' in navigator) {
-                navigator.serviceWorker.register('./serviceworker.js', { scope: './' })
-                .then(registration => {console.log('Registration successful, scope is:', registration.scope)})
-                .catch(error => {console.log('Service worker registration failed, error:', error)});
-            }
-        </script>
-        <script src="./scripts/centrifuge.js"></script>
-        <script src="./scripts/bsv.browser.min.js" defer></script>
-        <script src="./scripts/config.js" defer></script>
-        <script src="./scripts/run.browser.min.js" defer></script>
-        <script src="./scripts/twemoji.min.js"></script>
-        <script src="./scripts/idb.js"></script>
-        <script src="./scripts/helpers.js"></script>
-        <script src="./scripts/purse.js" defer></script>
-        <script src="./scripts/qrcode.min.js"></script>
-        <script src="./scripts/history.js" defer></script>
-        <script src="./scripts/wallet.js" defer></script>
-    </body>
+        }
+        initScript();
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./serviceworker.js', { scope: './' })
+                .then(registration => { console.log('Registration successful, scope is:', registration.scope) })
+                .catch(error => { console.log('Service worker registration failed, error:', error) });
+        }
+    </script>
+    <script src="./scripts/centrifuge.js"></script>
+    <script src="./scripts/bsv.browser.min.js" defer></script>
+    <script src="./scripts/config.js" defer></script>
+    <script src="./scripts/run.browser.min.js" defer></script>
+    <script src="./scripts/twemoji.min.js"></script>
+    <script src="./scripts/idb.js"></script>
+    <script src="./scripts/helpers.js"></script>
+    <script src="./scripts/purse.js" defer></script>
+    <script src="./scripts/qrcode.min.js"></script>
+    <script src="./scripts/history.js" defer></script>
+    <script src="./scripts/wallet.js" defer></script>
+</body>
+
 </html>
