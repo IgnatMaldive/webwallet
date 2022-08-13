@@ -1,6 +1,6 @@
 {
-    "name": "mini wallet",
-    "short_name": "mini wallet",
+    "name": "miniwallet",
+    "short_name": "miniwallet",
     "orientation": "portrait",
     "scope": "./",
     "icons": [

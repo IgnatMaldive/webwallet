@@ -5,9 +5,9 @@
         <meta property="og:title" content="mini wallet"/>
         <meta property="og:type" content="website">
         <meta property="og:image:url" content="./assets/pwa-512x512.png">
-        <meta property="og:description" content="Send BSV - Your Keepsakes on Bitcoin">
+        <meta property="og:description" content="Send BSV ">
         <meta name="theme-color" content="#D3D3D3">
-        <meta name="description" content="Send BSV - Your Keepsakes on Bitcoin">
+        <meta name="description" content="Send BSV ">
         <meta name="apple-mobile-web-app-title" content="mini wallet">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <link rel="manifest" href="./manifest.json">
@@ -21,17 +21,17 @@
         <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Courier+Prime:wght@400;700&family=Roboto+Slab:wght@300&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="page center">
+        <div class="page left">
             <div class="extension">
                 <a href="./index.html"><img src="./assets/back.svg" class="back" id="back"></a>
-                <div class="purseCon">PURSE</div>
+                <div class="purseCon"></div>
                 <div class="jigs">
                     <div id="jigscon">
                         <div class="label curBal">Current Balance</div>
                         <div class="jigsList" id="tokens">
                             <p>
                                 <span class="emoji">
-                                    <img src="./assets/bsv-icon.svg" class="emoji">
+                                    <!-- <img src="./assets/bsv-icon.svg" class="emoji"> -->
                                 </span>
                                 <span class="contractName">Bitcoin SV</span>
                                 <span id="tokenBalance" class="tokenBalance"></span>
@@ -47,6 +47,7 @@
                         </div>
                         <div class="send">
                             <button class="jigsBtn" type="button" id="sendbsv">SEND</button>
+
                         </div>
                     </div>
                     <div class="check" id="confirm">
