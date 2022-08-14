@@ -1,67 +1,168 @@
 <html lang="en">
-    <head>
-        <title>Send BSV - mini wallet</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta property="og:title" content="mini wallet"/>
-        <meta property="og:type" content="website">
-        <meta property="og:image:url" content="./assets/pwa-512x512.png">
-        <meta property="og:description" content="Send BSV ">
-        <meta name="theme-color" content="#D3D3D3">
-        <meta name="description" content="Send BSV ">
-        <meta name="apple-mobile-web-app-title" content="mini wallet">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <link rel="manifest" href="./manifest.json">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link rel="apple-touch-icon" href="./assets/apple-touch-icon-180x180.png">
-        <link rel="icon" href="./favicon.ico">
-        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
-        <link rel="stylesheet" type="text/css" href="./styles/sendbsv.css">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Courier+Prime:wght@400;700&family=Roboto+Slab:wght@300&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <div class="page left">
-            <div class="extension">
-                <a href="./index.html"><img src="./assets/back.svg" class="back" id="back"></a>
-                <div class="purseCon"></div>
-                <div class="jigs">
-                    <div id="jigscon">
-                        <div class="label curBal">Current Balance</div>
-                        <div class="jigsList" id="tokens">
-                            <p>
-                                <span class="emoji">
-                                    <!-- <img src="./assets/bsv-icon.svg" class="emoji"> -->
-                                </span>
-                                <span class="contractName">Bitcoin SV</span>
-                                <span id="tokenBalance" class="tokenBalance"></span>
-                            </p>
-                        </div>
-                        <div class="label amtlabel">Amount to Send</div>
-                        <div>
-                            <input type="number" class="sendAmt" id="sendamt" step="0.0001">
-                        </div>
-                        <div class="label addrlabel">Paymail / Address</div>
-                        <div>
-                            <input type="text" class="addrInput" id='sendaddr'>
-                        </div>
-                        <div class="send">
-                            <button class="jigsBtn" type="button" id="sendbsv">SEND</button>
+
+<head>
+    <title>Send BSV - mini wallet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="mini wallet" />
+    <meta property="og:type" content="website">
+    <meta property="og:image:url" content="./assets/pwa-512x512.png">
+    <meta property="og:description" content="Send BSV ">
+    <meta name="theme-color" content="#D3D3D3">
+    <meta name="description" content="Send BSV ">
+    <meta name="apple-mobile-web-app-title" content="mini wallet">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="apple-touch-icon" href="./assets/apple-touch-icon-180x180.png">
+    <link rel="icon" href="./favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+    <link rel="stylesheet" type="text/css" href="./styles/sendbsv.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Courier+Prime:wght@400;700&family=Roboto+Slab:wght@300&family=Roboto:wght@100;300&display=swap"
+        rel="stylesheet">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="check" id="confirm">
+        <a href="" id="confirmation" target="_blank" rel="noreferrer"><img src="./assets/check.svg"></a>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    </div>
+    <!-- Page Wrapper -->
+    <div id="page-top">
+        <div id="wrapper">
+
+
+            <!-- Content Wrapper -->
+            <div id="content-wrapper" class="d-flex flex-column">
+
+                <!-- Main Content -->
+                <div id="content">
+
+
+
+                    <!-- Begin Page Content -->
+                    <div class="container-fluid">
+
+                        <!-- Page Heading -->
+
+
+                        <div class="row">
+
+                            <!-- Earnings (Monthly) Card Example -->
+                            <div class="col-xl-3 col-md-6 mb-4">
+                                <div class="card border-left-primary shadow h-100 py-2">
+                                    <div class="card-body">
+                                        <div class="row no-gutters align-items-center">
+                                            <div class="col mr-2">
+                                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                    Earnings (Monthly)</div>
+                                                <br>
+
+                                                <div class="page left">
+                                                    <div class="extension">
+                                                        <a href="./index.html"><img src="./assets/back.svg" class="back"
+                                                                id="back"></a>
+                                                        <div class="purseCon"></div>
+                                                        <div class="jigs">
+                                                            <div id="jigscon">
+                                                                <div class="label curBal">Balance</div>
+                                                                <div class="jigsList" id="tokens">
+                                                                    <p>
+                                                                        <span class="emoji">
+                                                                            <!-- <img src="./assets/bsv-icon.svg" class="emoji"> -->
+                                                                        </span>
+                                                                        <span class="contractName">BSV</span>
+                                                                        <span id="tokenBalance"
+                                                                            class="tokenBalance"></span>
+                                                                    </p>
+                                                                </div>
+                                                                <div class="label amtlabel">Amount to Send</div>
+                                                                <div>
+                                                                    <input type="number" class="sendAmt" id="sendamt"
+                                                                        step="0.0001">
+                                                                </div>
+                                                                <div class="label addrlabel">Paymail / Address</div>
+                                                                <div>
+                                                                    <input type="text" class="addrInput" id='sendaddr'>
+                                                                </div>
+                                                                <div class="send">
+                                                                    <button class="jigsBtn" type="button"
+                                                                        id="sendbsv">SEND</button>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="check" id="confirm">
+                                                                <a href="" id="confirmation" target="_blank"
+                                                                    rel="noreferrer"><img src="./assets/check.svg"></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="h5 mb-0 font-weight-bold text-gray-800">saldo</div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+
 
                         </div>
+
+
+
                     </div>
-                    <div class="check" id="confirm">
-                        <a href="" id="confirmation" target="_blank" rel="noreferrer"><img src="./assets/check.svg"></a>
-                    </div>
+                    <!-- /.container-fluid -->
+
                 </div>
+                <!-- End of Main Content -->
+
+
             </div>
+            <!-- End of Content Wrapper -->
+
         </div>
-    </body>
-    <script src="./scripts/bsv.browser.min.js"></script>
-    <script src="./scripts/config.js"></script>
-    <script src="./scripts/run.browser.min.js"></script>
-    <script src="./scripts/idb.js"></script>
-    <script src="./scripts/helpers.js"></script>
-    <script src="./scripts/purse.js"></script>
-    <script src="./scripts/sendbsv.js"></script>
+
+
+
+</body>
+<script src="./scripts/bsv.browser.min.js"></script>
+<script src="./scripts/config.js"></script>
+<script src="./scripts/run.browser.min.js"></script>
+<script src="./scripts/idb.js"></script>
+<script src="./scripts/helpers.js"></script>
+<script src="./scripts/purse.js"></script>
+<script src="./scripts/sendbsv.js"></script>
+
 </html>
